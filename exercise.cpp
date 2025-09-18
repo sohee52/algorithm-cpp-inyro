@@ -1,22 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-const ll MAX = 200000;
-ll n, c, a[MAX+4];
-void go(int cnt) {
-	if (cnt == c) ret = max(ret, 
-	for (int i = 0; i < n; i++) {
-		visited[i] = 1;
-		go(cnt++);
-		visited[i] = 0;
+int n, m, l, a[1004];
+bool check(int x) {
+	int cnt = 0;
+	for (int i = 1; i <= n+1; i++) {
+		int diff = a[i] - a[i-1];
+		cnt += diff / x;
+		if (diff % x == 0) cnt--;
 	}
+	return cnt <= m;
+}
+int bi() {
+	int lo = 1, hi = l;
+	while (lo < hi) {
+		int mid = (lo+hi)/2;
+		if (check(mid)) hi = mid;
+		else lo = mid + 1;
+	}
+	return lo;
 }
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL); cout.tie(NULL);
-	cin >> n >> c;
-	for (int i = 1; i <= n; i++) cin >> a[i];
-	sort(a+1, a+n+1);
-	cout << go();
+	cin >> n >> m >> l;
+	for (int i = 1; i <= n; i++) {
+		cin >> a[i];
+	}
+	a[0] = 0, a[n+1] = l;
+	sort(a, a+n+2);
+	cout << bi() << "\n";
 }
- 
