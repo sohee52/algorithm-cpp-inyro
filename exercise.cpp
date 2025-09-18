@@ -1,32 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n, m, l, a[1004];
+const int MAX = 1000000;
+int n, m, k, w, a, b, p[MAX+4][MAX+4];
 bool check(int x) {
-	int cnt = 0;
-	for (int i = 1; i <= n+1; i++) {
-		int diff = a[i] - a[i-1];
-		cnt += diff / x;
-		if (diff % x == 0) cnt--;
-	}
-	return cnt <= m;
+	
 }
 int bi() {
-	int lo = 1, hi = l;
+	int lo = 1, hi = MAX;
 	while (lo < hi) {
 		int mid = (lo+hi)/2;
-		if (check(mid)) hi = mid;
-		else lo = mid + 1;
+		if (check(mid)) 
+		else 
 	}
 	return lo;
 }
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL); cout.tie(NULL);
-	cin >> n >> m >> l;
-	for (int i = 1; i <= n; i++) {
-		cin >> a[i];
+	cin >> n >> m >> k >> w;
+	for (int i = 0; i < w; i++) {
+		cin >> a >> b;
+		a--; b--;
+		p[a][b] = 1;
 	}
-	a[0] = 0, a[n+1] = l;
-	sort(a, a+n+2);
+	if (w == 0) {
+		cout << 0 << "\n";
+		return 0;
+	}
 	cout << bi() << "\n";
 }
