@@ -1,0 +1,1 @@
+{"name":"Local: 32294","url":"c:\\Users\\PC\\Desktop\\algorithm-cpp-inyro\\3-Dijkstra\\32294.cpp","tests":[{"id":1759506123130,"input":"5\n3 4 2 5 1\n2 5 1 4 3","output":"2 5 3 4 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\PC\\Desktop\\algorithm-cpp-inyro\\3-Dijkstra\\32294.cpp","group":"local","local":true}
