@@ -49,7 +49,7 @@ int main() {
     }
 
     // parent 이용해서 최단경로 간선 추적
-    int ans = 0;
+    int ret = 0;
     int v = n;
     while (v != 1) {
         int u = parent[v];
@@ -59,9 +59,9 @@ int main() {
             cout << -1 << "\n";
             return 0;
         }
-        ans = max(ans, temp - base);
+        ret = max(ret, temp - base);
         v = u;
     }
 
-    cout << ans << "\n";
+    cout << ret << "\n";
 }
