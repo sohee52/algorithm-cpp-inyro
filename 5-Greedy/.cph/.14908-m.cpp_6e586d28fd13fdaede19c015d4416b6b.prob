@@ -1,0 +1,1 @@
+{"name":"Local: 14908-m","url":"c:\\Users\\PC\\Desktop\\algorithm-cpp-inyro\\5-Greedy\\14908-m.cpp","tests":[{"id":1762710573545,"input":"4\n3 4\n1 1000\n2 2\n5 5","output":"2 1 3 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\PC\\Desktop\\algorithm-cpp-inyro\\5-Greedy\\14908-m.cpp","group":"local","local":true}
