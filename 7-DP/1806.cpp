@@ -7,6 +7,7 @@ int main() {
 
     int n, s;
     cin >> n >> s;
+    
     vector<int> a(n);
     for (int i = 0; i < n; i++) cin >> a[i];
 
